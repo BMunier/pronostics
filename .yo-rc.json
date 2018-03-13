@@ -38,6 +38,8 @@
       "fr",
       "en",
       "de"
-    ]
+    ],
+    "herokuDeployType": "git",
+    "herokuAppName": "whispering-waters-81552"
   }
 }
