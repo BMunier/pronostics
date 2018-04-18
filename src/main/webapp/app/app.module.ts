@@ -27,6 +27,7 @@ import {
     ActiveMenuDirective,
     ErrorComponent
 } from './layouts';
+import { GestionPronosticsModule } from './gestion-pronostics/gestion-pronostics.module';
 
 @NgModule({
     imports: [
@@ -38,6 +39,7 @@ import {
         PronosticsAdminModule,
         PronosticsAccountModule,
         PronosticsEntityModule,
+        GestionPronosticsModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [
