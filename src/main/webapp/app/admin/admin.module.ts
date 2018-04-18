@@ -27,7 +27,8 @@ import {
     LogsService,
     UserResolvePagingParams,
     UserResolve,
-    UserModalService
+    UserModalService,
+    TeamComponent
 } from './';
 
 @NgModule({
@@ -50,7 +51,8 @@ import {
         JhiHealthModalComponent,
         JhiDocsComponent,
         JhiMetricsMonitoringComponent,
-        JhiMetricsMonitoringModalComponent
+        JhiMetricsMonitoringModalComponent,
+        TeamComponent
     ],
     entryComponents: [
         UserMgmtDialogComponent,
