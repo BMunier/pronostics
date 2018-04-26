@@ -30,6 +30,7 @@ import {
     UserModalService,
     TeamComponent
 } from './';
+import { TeamsService } from './team/teams.service';
 
 @NgModule({
     imports: [
@@ -62,6 +63,7 @@ import {
     ],
     providers: [
         AuditsService,
+        TeamsService,
         JhiConfigurationService,
         JhiHealthService,
         JhiMetricsService,
