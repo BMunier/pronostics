@@ -16,7 +16,6 @@ export class TeamComponent implements OnInit {
   team : String;
   code : String;
   rang : String;
-  answer : String;
   constructor() { }
 
   ngOnInit() {
