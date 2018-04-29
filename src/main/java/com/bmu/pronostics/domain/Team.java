@@ -33,5 +33,57 @@ public class Team implements Serializable{
 
     @Column(name="code")
     private String code;
+
+	public Long getId()
+	{
+		return this.id;
+	}
+
+	public void setId(Long id)
+	{
+		this.id = id;
+	}
+
+	public String getName()
+	{
+		return this.name;
+	}
+
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+
+	public String getPays()
+	{
+		return this.pays;
+	}
+
+	public void setPays(String pays)
+	{
+		this.pays = pays;
+	}
+
+	public Integer getRang()
+	{
+		return this.rang;
+	}
+
+	public void setRang(Integer rang)
+	{
+		this.rang = rang;
+	}
+
+	public String getCode()
+	{
+		return this.code;
+	}
+
+	public void setCode(String code)
+	{
+		this.code = code;
+	}
+
     
 }
