@@ -8,17 +8,17 @@
         <td>Rang</td>
     </tr>
   <tr>
-        <td> <input type="text" ng-model="team" ng-model-options="{ getterSetter: true }"></input></td>
-        <td><input type="text" ng-model="code" ng-model-options="{ getterSetter: true }"></input></td>
-        <td><input type="text" ng-model="rang" ng-model-options="{ getterSetter: true }"></input></td>
+        <td> <input type="text" [(ngModel)]="team" ></input></td>
+        <td><input type="text" [(ngModel)]="code" ></input></td>
+        <td><input type="text" [(ngModel)]="rang" ></input></td>
   </tr>
   <tr>
-      <td ng-model="answer">Test</td>
+      <td [(ngModel)]="answer">{{answer}}</td>
     </tr>
 </table>
 
   <button type="button" (click)="add()">
-    <span class="glyphicon glyphicon-minus"></span>ADD
+    ADD
   </button>
 </div>
 </div>

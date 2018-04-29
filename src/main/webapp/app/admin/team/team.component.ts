@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { log } from 'util';
+import { NgModel } from '@angular/forms';
 
 @Component({
-  selector: 'jhi-team',
+  selector: 'jhi-teimportam',
   templateUrl: './team.component.html',
-  styles: []
 })
-export class TeamComponent implements OnInit {
 
+
+
+export class TeamComponent implements OnInit {
+  team : String;
+  code : String;
+  rang : String;
+  answer : String;
   constructor() { }
 
   ngOnInit() {
   }
 
+  add(){
+
+  
+  
+  }
 }
