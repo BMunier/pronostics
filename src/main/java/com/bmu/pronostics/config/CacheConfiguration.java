@@ -40,11 +40,14 @@ public class CacheConfiguration {
             cm.createCache(com.bmu.pronostics.repository.UserRepository.USERS_BY_LOGIN_CACHE, jcacheConfiguration);
             cm.createCache(com.bmu.pronostics.repository.UserRepository.USERS_BY_EMAIL_CACHE, jcacheConfiguration);
             cm.createCache(com.bmu.pronostics.domain.User.class.getName(), jcacheConfiguration);
+            cm.createCache(com.bmu.pronostics.domain.Stade.class.getName(), jcacheConfiguration);
             cm.createCache(com.bmu.pronostics.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.bmu.pronostics.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.bmu.pronostics.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(com.bmu.pronostics.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
             cm.createCache(com.bmu.pronostics.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            
+
             // jhipster-needle-ehcache-add-entry
         };
     }

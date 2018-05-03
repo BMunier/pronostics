@@ -1,0 +1,47 @@
+<div>
+  <h2>
+    <span>Stade</span>
+  </h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+          <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="nom"><span>Nom</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="ville"><span>Ville</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="nombrePlaces"><span>Nombre de places</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="nom"><span>Créé le</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="nom"><span>Créé par</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="nom"><span>Modifié le</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="nom"><span>Modifié par</span> <span class="fa fa-sort"></span></th>
+            
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stade of stades; trackBy: trackIdentity">
+              <td>{{stade.id}}</td>
+              <td>{{stade.nom}}</td>
+              <td>{{stade.ville}}</td>
+              <td>{{stade.nombrePlaces}}</td>
+              <td>{{stade.createdBy}}</td>
+              <td>{{stade.createdDate | date:'dd/MM/yy HH:mm'}}</td>
+              <td>{{stade.lastModifiedBy}}</td>
+              <td>{{stade.lastModifiedDate | date:'dd/MM/yy HH:mm'}}</td>
+              <td class="text-right">
+                <div class="btn-group flex-btn-group-container">
+                    <button type="submit"
+                            [routerLink]="['/', { outlets: { popup: 'stade-management/'+ stade.id + '/edit'} }]"
+                            replaceUrl="true"
+                            queryParamsHandling="merge"
+                            class="btn btn-primary btn-sm">
+                        <span class="fa fa-pencil"></span>
+                        <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                    </button>
+                </div>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+</div>

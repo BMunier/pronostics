@@ -76,6 +76,7 @@ export class UserMgmtComponent implements OnInit, OnDestroy {
     }
 
     loadAll() {
+        console.log("Load all");
         this.userService.query({
             page: this.page - 1,
             size: this.itemsPerPage,
