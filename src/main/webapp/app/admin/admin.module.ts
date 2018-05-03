@@ -27,8 +27,14 @@ import {
     LogsService,
     UserResolvePagingParams,
     UserResolve,
-    UserModalService
+    UserModalService,
+    StadeResolvePagingParams,
+    StadeManagementComponent,
+    StadeMgmntService,
+    StadeManagementDialogComponent
 } from './';
+
+//import { StadeMgmntService } from './stade-management/stade-management.service';
 
 @NgModule({
     imports: [
@@ -50,13 +56,15 @@ import {
         JhiHealthModalComponent,
         JhiDocsComponent,
         JhiMetricsMonitoringComponent,
-        JhiMetricsMonitoringModalComponent
+        JhiMetricsMonitoringModalComponent,
+        StadeManagementComponent,
+        StadeManagementDialogComponent, 
     ],
     entryComponents: [
         UserMgmtDialogComponent,
         UserMgmtDeleteDialogComponent,
         JhiHealthModalComponent,
-        JhiMetricsMonitoringModalComponent,
+        JhiMetricsMonitoringModalComponent
     ],
     providers: [
         AuditsService,
@@ -66,7 +74,9 @@ import {
         LogsService,
         UserResolvePagingParams,
         UserResolve,
-        UserModalService
+        UserModalService,
+        StadeResolvePagingParams,
+        StadeMgmntService
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
