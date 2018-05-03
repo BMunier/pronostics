@@ -38,8 +38,8 @@ import {
         AuthServerProvider,
         SocialService,
         UserService,
-        DatePipe
-    ],
+        DatePipe,
+],
     entryComponents: [JhiLoginModalComponent],
     exports: [
         PronosticsSharedCommonModule,
