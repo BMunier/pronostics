@@ -25,3 +25,5 @@ export * from './social/social.component';
 export * from './shared-libs.module';
 export * from './shared-common.module';
 export * from './shared.module';
+export * from './pays/pays.model';
+export * from './pays/pays.service';

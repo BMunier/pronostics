@@ -26,4 +26,6 @@ export * from './user-management/user-management-detail.component';
 export * from './user-management/user-management.component';
 export * from './user-management/user-management.route';
 export * from './user-management/user-modal.service';
+export * from './pays/pays.component';
+export * from './pays/pays.route';
 export * from './admin.route';
