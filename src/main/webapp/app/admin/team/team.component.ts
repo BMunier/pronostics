@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { log } from 'util';
+import { NgModel } from '@angular/forms';
 
 import { Team } from './team.model';
 import { TeamsService } from './teams.service';
@@ -8,12 +10,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ITEMS_PER_PAGE } from '../../shared';
 
-@Component({
-  selector: 'jhi-team',
-  templateUrl: './team.component.html',
-  styles: []
-})
 export class TeamComponent implements OnInit {
+
+  @Component({
+    selector: 'jhi-teimportam',
+    templateUrl: './team.component.html',
+  })
 
   predicate: any;
   reverse: any;
@@ -26,7 +28,7 @@ export class TeamComponent implements OnInit {
   links: any;
   totalItems: number;
 
-  constructor(private teamsService: TeamsService,
+    constructor(private teamsService: TeamsService,
     private alertService: JhiAlertService,
     private parseLinks: JhiParseLinks,
     private activatedRoute: ActivatedRoute,
