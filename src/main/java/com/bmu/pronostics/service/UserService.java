@@ -1,17 +1,25 @@
 package com.bmu.pronostics.service;
 
-import com.bmu.pronostics.config.CacheConfiguration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import com.bmu.pronostics.config.Constants;
 import com.bmu.pronostics.domain.Authority;
 import com.bmu.pronostics.domain.User;
 import com.bmu.pronostics.repository.AuthorityRepository;
 import com.bmu.pronostics.repository.PersistentTokenRepository;
-import com.bmu.pronostics.config.Constants;
 import com.bmu.pronostics.repository.UserRepository;
 import com.bmu.pronostics.repository.search.UserSearchRepository;
 import com.bmu.pronostics.security.AuthoritiesConstants;
 import com.bmu.pronostics.security.SecurityUtils;
-import com.bmu.pronostics.service.util.RandomUtil;
 import com.bmu.pronostics.service.dto.UserDTO;
+import com.bmu.pronostics.service.util.RandomUtil;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,12 +30,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.time.LocalDate;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Service class for managing users.

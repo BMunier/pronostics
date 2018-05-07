@@ -7,12 +7,13 @@ import { createRequestOption } from '../../shared/model/request-util';
 
 @Injectable()
 export class TeamsService {
+
     constructor(private http: HttpClient) { }
 
     query(req: any): Observable<HttpResponse<Team[]>> {
         const params: HttpParams = createRequestOption(req);
 
-        const requestURL = SERVER_API_URL + 'management/teams';
+        const requestURL = SERVER_API_URL + 'api/teams';
 
         return this.http.get<Team[]>(requestURL, {
             params,

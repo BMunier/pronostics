@@ -1,24 +1,29 @@
 
 <div class="col-sm-10">
 <div class="col-sm-4">
-  <table> 
-  <tr>
-        <td>Équipe</td>
-        <td>Code</td>
-        <td>Rang</td>
-    </tr>
-  <tr>
-        <td> <input type="text" ng-model="team" ng-model-options="{ getterSetter: true }"></input></td>
-        <td><input type="text" ng-model="code" ng-model-options="{ getterSetter: true }"></input></td>
-        <td><input type="text" ng-model="rang" ng-model-options="{ getterSetter: true }"></input></td>
-  </tr>
-  <tr>
-      <td ng-model="answer">Test</td>
-    </tr>
-</table>
+  <div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+          <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="nom"><span>Nom</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="pays"><span>Pays</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="rang"><span>Rang</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="code"><span>Code</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let team of teams; trackBy trackIdentity">
+            <td>{{team.id}}</td>
+            <td>{{team.id}}</td>
+            <td>{{team.id}}</td>
+            <td>{{team.id}}</td>
+            <td>{{team.id}}</td>
+          </tr>
+        </tbody>
 
-  <button type="button" (click)="add()">
-    <span class="glyphicon glyphicon-minus"></span>ADD
-  </button>
+    </table>
+</div>
 </div>
 </div>
