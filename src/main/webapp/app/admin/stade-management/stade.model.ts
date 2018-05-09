@@ -11,7 +11,7 @@ export class Stade {
     constructor(
         id?: any,
         nom?: string,
-        ville?:string,
+        ville?: string,
         nombrePlaces?: number,
         createdBy?: string,
         lastmodifiedBy?: string,
@@ -25,6 +25,6 @@ export class Stade {
         this.createdBy = createdBy ? createdBy : null;
         this.lastmodifiedBy = lastmodifiedBy ? lastmodifiedBy : null;
         this.createdDate = createdBy ? createdDate : null;
-        this.lastModifiedDate = lastModifiedDate  ? lastModifiedDate : null;
+        this.lastModifiedDate = lastModifiedDate ? lastModifiedDate : null;
     }
 }

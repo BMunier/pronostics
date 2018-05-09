@@ -16,15 +16,15 @@ export class StadeMgmntService {
         return this.http.post<Stade>(this.resourceUrl, stade, { observe: 'response' });
     }
 
-    update(user: Stade): Observable<HttpResponse<Stade>> {
-        return this.http.put<Stade>(this.resourceUrl, user, { observe: 'response' });
+    update(stade: Stade): Observable<HttpResponse<Stade>> {
+        return this.http.put<Stade>(this.resourceUrl, stade, { observe: 'response' });
     }
 
-    find(): Observable<HttpResponse<Stade>> {
-        return this.http.get<Stade>(`${this.resourceUrl}`, { observe: 'response' });
+    find(id: string): Observable<HttpResponse<Stade>> {
+        return this.http.get<Stade>(`${this.resourceUrl}/${id}`, { observe: 'response' });
     }
-    delete(login: string): Observable<HttpResponse<any>> {
-        return this.http.delete(`${this.resourceUrl}/${login}`, { observe: 'response' });
+    delete(id: string): Observable<HttpResponse<any>> {
+        return this.http.delete(`${this.resourceUrl}/${id}`, { observe: 'response' });
     }
     query(req?: any): Observable<HttpResponse<Stade[]>> {
         const options = createRequestOption(req);

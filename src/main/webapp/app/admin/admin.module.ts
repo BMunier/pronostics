@@ -31,7 +31,10 @@ import {
     StadeResolvePagingParams,
     StadeManagementComponent,
     StadeMgmntService,
-    StadeManagementDialogComponent
+    StadeManagementDialogComponent,
+    StadeDialogComponent,
+    StadeDialogRoute,
+    StadeModalService
 } from './';
 
 //import { StadeMgmntService } from './stade-management/stade-management.service';
@@ -58,11 +61,13 @@ import {
         JhiMetricsMonitoringComponent,
         JhiMetricsMonitoringModalComponent,
         StadeManagementComponent,
-        StadeManagementDialogComponent, 
+        StadeManagementDialogComponent,
+        StadeDialogComponent
     ],
     entryComponents: [
         UserMgmtDialogComponent,
         UserMgmtDeleteDialogComponent,
+        StadeManagementDialogComponent,
         JhiHealthModalComponent,
         JhiMetricsMonitoringModalComponent
     ],
@@ -76,7 +81,8 @@ import {
         UserResolve,
         UserModalService,
         StadeResolvePagingParams,
-        StadeMgmntService
+        StadeMgmntService,
+        StadeModalService
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

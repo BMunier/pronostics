@@ -1,3 +1,46 @@
-<p>
-  stade-management-dialog works!
-</p>
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myUserLabel" jhiTranslate="userManagement.home.createOrEditLabel">
+            Create or edit a User</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!stade.id">
+            <label jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" name="id" [(ngModel)]="stade.id" readonly>
+        </div>
+        <div class="modal-body">
+            <jhi-alert-error></jhi-alert-error>
+            <div class="form-group">
+                Nom
+                <input type="text" class="form-control" name="nom" [(ngModel)]="stade.nom">
+            </div>
+        </div>
+        <div class="modal-body">
+            <jhi-alert-error></jhi-alert-error>
+            <div class="form-group">
+                Ville
+                <input type="text" class="form-control" name="ville" [(ngModel)]="stade.ville">
+            </div>
+        </div>
+        <div class="modal-body">
+            <jhi-alert-error></jhi-alert-error>
+            <div class="form-group">
+                Nombre de places
+                <input type="text" class="form-control" name="nombrePlaces" [(ngModel)]="stade.nombrePlaces">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;
+            <span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-floppy-o"></span>&nbsp;
+            <span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -10,7 +10,7 @@ import {
     userMgmtRoute,
     userDialogRoute,
     stadeMgmntRoute,
-    stadeDialogRoute
+    StadeDialogRoute
 } from './';
 
 import { UserRouteAccessService } from '../shared';
@@ -23,7 +23,9 @@ const ADMIN_ROUTES = [
     logsRoute,
     ...userMgmtRoute,
     metricsRoute,
+    ...StadeDialogRoute,
     stadeMgmntRoute
+    
 ];
 
 export const adminState: Routes = [{
@@ -35,5 +37,5 @@ export const adminState: Routes = [{
     children: ADMIN_ROUTES
 },
     ...userDialogRoute,
-    ...stadeDialogRoute
+    ...StadeDialogRoute
 ];

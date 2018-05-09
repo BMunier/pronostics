@@ -1,5 +1,7 @@
 package com.bmu.pronostics.repository;
 
+import java.util.Optional;
+
 import com.bmu.pronostics.domain.Stade;
 import com.bmu.pronostics.domain.User;
 
@@ -16,5 +18,8 @@ import org.springframework.stereotype.Repository;
 public interface StadeRepository extends JpaRepository<Stade, Long> {
 
      Page<Stade> findAll(Pageable pageable);
+     Optional<Stade> findOneById(Long id);
+     Optional<Stade> findOneByNom(String Nom);
+     
    
 }

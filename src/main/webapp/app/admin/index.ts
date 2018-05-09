@@ -31,4 +31,5 @@ export * from './stade-management/stade-management.service';
 export * from './stade-management/stade-management.route';
 export * from './stade-management/stade.model';
 export * from './stade-management/stade-management-dialog.component';
+export * from './stade-management/stade-modal.service';
 export * from './admin.route';
