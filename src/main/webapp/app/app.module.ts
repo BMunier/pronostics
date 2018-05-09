@@ -27,6 +27,7 @@ import {
     ActiveMenuDirective,
     ErrorComponent
 } from './layouts';
+import { TeamResolvePagingParams } from './admin';
 
 @NgModule({
     imports: [
@@ -52,6 +53,7 @@ import {
         ProfileService,
         PaginationConfig,
         UserRouteAccessService,
+        TeamResolvePagingParams,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: AuthExpiredInterceptor,

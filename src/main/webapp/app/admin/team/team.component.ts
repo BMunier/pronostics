@@ -15,19 +15,23 @@ import { ITEMS_PER_PAGE } from '../../shared';
 })
 export class TeamComponent implements OnInit {
 
+  currentAccount: any;
+  error: any;
+  success: any;
   predicate: any;
   reverse: any;
   previousPage: any;
-  routeData: Subscription;
-  queryCount: number;
+  routeData: any;
+  queryCount: any;
   itemsPerPage: any;
   teams: Team[];
   page: any;
   links: any;
-  totalItems: number;
+  totalItems: any;
 
   constructor(private teamsService: TeamsService,
     private alertService: JhiAlertService,
+    private teamService: TeamsService,
     private parseLinks: JhiParseLinks,
     private activatedRoute: ActivatedRoute,
     private router: Router,
@@ -44,7 +48,6 @@ export class TeamComponent implements OnInit {
   ngOnInit() {
     this.loadAll();
   }
-
   loadAll() {
     this.teamsService.query({
       page: this.page - 1,
